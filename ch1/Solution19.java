@@ -14,7 +14,6 @@ public class Solution19 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution19 t = new Solution19();
 		String s1 = "waterbottle";
 		String s2 = "bottlewater";

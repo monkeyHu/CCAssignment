@@ -20,7 +20,6 @@ public class Solution16 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution16 t = new Solution16();
 		String s = "aabcccccaaa";
 		System.out.println(t.stringCompression(s));

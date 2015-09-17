@@ -7,7 +7,6 @@ public class Solution23 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution23 t = new Solution23();
 		ListNode head = new ListNode(1);
 		ListNode p = new ListNode(2);

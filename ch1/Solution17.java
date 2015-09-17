@@ -1,35 +1,34 @@
 package ch1;
 
 public class Solution17 {
-    public void RotateMatrix(int [][]matrix, int n){
-    	for(int layer = 0; layer < n/2; layer++){
-    		int first = layer;
-    		int last = n - layer -1;
-    		for(int i = first; i < last; i++){
-    			int offset = i - first;
-    			int top = matrix[first][i];
-    			
-    			matrix[first][i] = matrix[last-offset][first];
-    			
-    			matrix[last-offset][first] = matrix[last][last-offset];
-    			
-    			matrix[last][last-offset] = matrix[i][last];
-    			
-    			matrix[i][last] = top;
-    		}
-    	}
-    }
+	public void RotateMatrix(int[][] matrix, int n) {
+		for (int i = 0; i < n / 2; i++) {
+			for (int j = i; j < n - 1; j++) {
+				// save top
+				int temp = matrix[i][j];
+				// left to top
+				matrix[i][j] = matrix[n - 1 - j][i];
+				// right to left
+				matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
+				// bottom to right
+				matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i];
+				// top to right
+				matrix[j][n - 1 - i] = temp;
+			}
+		}
+
+	}
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-        Solution17 t = new Solution17();
-        int [][] matrix = {{1,2,3},{2,3,4},{4,5,6}};
-        t.RotateMatrix(matrix, matrix.length);
-        for(int i = 0 ; i < matrix.length; i++){
-        	for(int j = 0; j < matrix[0].length; j++){
-        		System.out.print(matrix[i][j] + " ");
-        	}
-        	System.out.println();
-        }
+		Solution17 t = new Solution17();
+		int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+		t.RotateMatrix(matrix, matrix.length);
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[0].length; j++) {
+				System.out.print(matrix[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 
 }

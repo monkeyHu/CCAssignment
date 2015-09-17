@@ -46,7 +46,6 @@ public class Solution15 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution15 t = new Solution15();
 		String s1 = "pale";
 		String s2 = "ple";

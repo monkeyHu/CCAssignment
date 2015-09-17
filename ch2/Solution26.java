@@ -9,7 +9,7 @@ public class Solution26 {
 		ListNode slow = head;
 		ListNode fast = head;
 		Stack<Integer> stack = new Stack<Integer>();
-		while (fast != null && fast.next != null) {
+		while (fast != null && fast.next != null) { //slow traverse half of the linked list
 			stack.push(slow.val);
 			slow = slow.next;
 			fast = fast.next.next;
@@ -27,7 +27,6 @@ public class Solution26 {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution26 t = new Solution26();
 		ListNode head = new ListNode(1);
 		ListNode p = new ListNode(2);

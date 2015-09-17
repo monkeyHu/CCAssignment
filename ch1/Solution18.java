@@ -29,7 +29,6 @@ public class Solution18 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
       Solution18 t = new Solution18();
       int[][] matrix = {{1,2,3},{1,0,1},{2,2,0}};
       t.setZeors(matrix);

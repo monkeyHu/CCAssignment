@@ -40,7 +40,6 @@ public class Solution25 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution25 t = new Solution25();
 		ListNode l1 = new ListNode(7);
 		ListNode p = new ListNode(1);
