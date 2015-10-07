@@ -14,13 +14,13 @@ public class Solution4_3 {
 			current.add(root);
 		}
 		while(current.size() > 0){
-			result.add(current);
+			result.add(current);//Add the first level to the result
 			LinkedList<TreeNode> parents = current;//go to the next level
-			current = new LinkedList<TreeNode>();
+			current = new LinkedList<TreeNode>();//Reset the current leverl
 			for(TreeNode p:parents){
-				if(p.left != null)
+				if(p.left != null)//If left child is not null
 					current.add(p.left);
-				if(p.right != null)
+				if(p.right != null)//If right child is not null
 					current.add(p.right);
 			}
 		}

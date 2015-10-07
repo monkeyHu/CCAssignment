@@ -16,13 +16,15 @@ public class Solution4_2 {
 		return createMinimalBST(array, 0, array.length - 1);
 	}
 
+	/*Since the array is sorted, to obtain a minimal height tree, we should make the number of nodes
+	in both subtree is almost equal, so we first choose the middle as the root*/
 	public TreeNode createMinimalBST(int array[], int start, int end) {
 		if (end < start)
 			return null;
 		int mid = (start + end) / 2;
-		TreeNode n = new TreeNode(array[mid]);
-		n.left = createMinimalBST(array, start, mid - 1);
-		n.right = createMinimalBST(array, mid + 1, end);
+		TreeNode n = new TreeNode(array[mid]);//Make the middle as the root
+		n.left = createMinimalBST(array, start, mid - 1);//Recursively create the left subtree
+		n.right = createMinimalBST(array, mid + 1, end);//Recursively create the right subtree
 		return n;
 	}
 

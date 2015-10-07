@@ -3,15 +3,14 @@ package ch4;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 /*Given a directed graph, design an algorithm to find out whether there is a rout between two nodes*/
 public class Solution4_1 {
 
-	// Graph class which use adjancent matrix to represent is
+	// Graph class which use adjancent matrix to represent
 	public class Graph {
 		private Object[] vertices; // Save the node information
 		private int[][] arcs;// Save the edge information
-		private int vexnum;
+		private int vexnum;// Number of nodes
 		private boolean[] visited;// track which node has been visited
 
 		/* Initialize a graph which has n vertices */
@@ -59,13 +58,14 @@ public class Solution4_1 {
 			return -1;
 		}
 
-		//Search the graph to check if there is a path between vertice start and vertice end
+		// Search the graph to check if there is a path between vertice start
+		// and vertice end
 		boolean search(int start, int end) {
 			Queue<Integer> q = new LinkedList<Integer>();
 			for (int i = 0; i < vexnum; i++) {
 				visited[i] = false;
 			}
-
+			// Use BFS
 			q.add(start);
 			visited[start] = true;
 			while (!q.isEmpty()) {
@@ -98,7 +98,6 @@ public class Solution4_1 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Solution4_1 t = new Solution4_1();
 		Graph g = t.new Graph(8);
 		Character[] vertices = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' };

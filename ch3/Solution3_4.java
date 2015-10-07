@@ -27,10 +27,11 @@ public class Solution3_4 {
 		}
 
 		public T peek() {
-			shiftStacks();
+			shiftStacks();//Ensure old stack has the current elements
 			return oldStack.peek();
 		}
 
+		/*Move elements from new stack to the old stack*/
 		public void shiftStacks() {
 			if (oldStack.isEmpty()) {
 				while (!newStack.isEmpty()) {

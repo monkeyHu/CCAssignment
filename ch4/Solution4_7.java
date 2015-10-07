@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Solution4_7 {
 	public Project[] findBuildorder(String[] projects, String[][] dependencies){
-		Graph graph = buildGraph(projects,dependencies);
+		Graph graph = buildGraph(projects,dependencies);//Build a graph, vertexs is projects, dependencies is edges
 		return this.orderProjects(graph.getNodes());
 	}
 	public class Project {

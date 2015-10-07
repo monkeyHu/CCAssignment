@@ -17,6 +17,7 @@ public class Solution4_11 {
 			this.size = 1;
 		}
 
+		//Insert a node to build a binary search tree
 		public void insertInorder(int d) {
 			if (d <= data) {
 				if (left == null)
@@ -32,6 +33,7 @@ public class Solution4_11 {
 			this.size++;
 		}
 
+		/*Find the node*/
 		public TreeNode find(int d) {
 			if (d == this.data) {
 				return this;
